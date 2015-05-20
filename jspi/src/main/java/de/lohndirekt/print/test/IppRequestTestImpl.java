@@ -99,7 +99,7 @@ public class IppRequestTestImpl implements IppRequest {
     private IppResponseTestImpl response;
     private Object data;
     private OperationsSupported operation;
-    //Id wird in der Cups-API zwar übergeben, ist aber auch immer 1.
+    //Id wird in der Cups-API zwar Ã¼bergeben, ist aber auch immer 1.
     private PrintJobAttributeSet jobAttributes = new HashPrintJobAttributeSet();
     private AttributeSet operationAttributes = new HashAttributeSet();
     private AttributeSet printerAttributes = new HashAttributeSet();
