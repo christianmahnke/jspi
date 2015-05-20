@@ -1,3 +1,4 @@
 .idea/
 *.iml
 target/
+src/test/resources/de/lohndirekt/print/test.properties
