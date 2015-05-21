@@ -1,6 +1,7 @@
 package de.lohndirekt.print;
 
 import java.util.Locale;
+import java.util.logging.Logger;
 
 import javax.print.DocFlavor;
 import javax.print.PrintService;
@@ -17,6 +18,7 @@ import junit.framework.TestCase;
  *
  */
 public class IppPrintServiceLookupTest extends TestCase {
+	private final Logger log = Logger.getLogger(this.getClass().getName());
 
 	/**
 	 * Constructor for IppPrintServiceLookupTest.
@@ -62,7 +64,9 @@ public class IppPrintServiceLookupTest extends TestCase {
 		
 		PrintService[] services = new IppPrintServiceLookup().getPrintServices(DocFlavor.INPUT_STREAM.POSTSCRIPT ,null);
 		assertTrue(services.length>0);
-		
+		for (PrintService ps: services) {
+			log.info("Got PrintService " + ps.getName());
+		}
 		
 	}
 }
