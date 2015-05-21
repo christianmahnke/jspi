@@ -442,14 +442,19 @@ public final class AttributeParser {
 			Integer upperBound = new Integer(parseInt4(in));
 			values = new Object[] { lowerBound, upperBound };
 		} else if (valueTag == IppValueTag.DATE.getValue()) {
-
 			Date date = parseDate(in);
 			values = new Object[] { date };
+		} else if (valueTag == IppValueTag.RESOLUTION.getValue()) {
+			Integer resolution = new Integer(in.read());
+			values = new Object[] { resolution };
 		} else if (valueTag == IppValueTag.NOVALUE.getValue()) {
 			values = new Object[] {
 			};
 		} else {
-			throw new IllegalArgumentException("\"" + Integer.toHexString(valueTag) + "\" is not a valid value-tag");
+			log.warning("\"" + Integer.toHexString(valueTag) + "\" is not a valid value-tag");
+			values = new Object[] {
+			};
+			//throw new IllegalArgumentException("\"" + Integer.toHexString(valueTag) + "\" is not a valid value-tag");
 		}
 		return values;
 	}
