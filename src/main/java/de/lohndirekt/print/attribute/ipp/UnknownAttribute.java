@@ -18,6 +18,7 @@
  */
 package de.lohndirekt.print.attribute.ipp;
 
+import java.net.URL;
 import java.util.Locale;
 
 import javax.print.attribute.SupportedValuesAttribute;
@@ -38,6 +39,10 @@ public class UnknownAttribute extends TextSyntax implements SupportedValuesAttri
 
 	public UnknownAttribute(int number1, int number2) {
 		super(Integer.toString(number1), Locale.getDefault());
+	}
+
+	public UnknownAttribute(URL url) {
+		super(url.toString(), Locale.getDefault());
 	}
 	
 	/**

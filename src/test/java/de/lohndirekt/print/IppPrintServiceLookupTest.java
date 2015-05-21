@@ -62,7 +62,8 @@ public class IppPrintServiceLookupTest extends TestCase {
 		set.add(user);
 		set.add(pass);
 		
-		PrintService[] services = new IppPrintServiceLookup().getPrintServices(DocFlavor.INPUT_STREAM.POSTSCRIPT ,null);
+		//PrintService[] services = new IppPrintServiceLookup().getPrintServices(DocFlavor.INPUT_STREAM.POSTSCRIPT ,null);
+		PrintService[] services = new IppPrintServiceLookup().getPrintServices();
 		assertTrue(services.length>0);
 		for (PrintService ps: services) {
 			log.info("Got PrintService " + ps.getName());
