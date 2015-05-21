@@ -27,6 +27,8 @@ public class IppValueTag {
 	private String description;
 	private int value = 0;
 
+	//See: https://tools.ietf.org/html/draft-ietf-ipp-protocol-v11-06#section-3.5.2
+
 	public static final IppValueTag UNSUPPORTED_VALUE = new IppValueTag(0x10, "unsupported");
 	public static final IppValueTag DEFAULT = new IppValueTag(0x11, "'default' ");
 	public static final IppValueTag UNKNOWN = new IppValueTag(0x12, "unknown");
