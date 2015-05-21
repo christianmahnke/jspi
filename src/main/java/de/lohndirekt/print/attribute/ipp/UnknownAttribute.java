@@ -35,6 +35,10 @@ public class UnknownAttribute extends TextSyntax implements SupportedValuesAttri
 	public UnknownAttribute(int number) {
 		super(Integer.toString(number), Locale.getDefault());
 	}
+
+	public UnknownAttribute(int number1, int number2) {
+		super(Integer.toString(number1), Locale.getDefault());
+	}
 	
 	/**
 	 *
